@@ -1,45 +1,52 @@
-#ICT171 Assignment 2 - Server Setup Documentation
+# ICT171 Assignment 2 - Server Setup Documentation
 
-Name: Syed Muhammad Haris Kazmi
-Student ID: 35501372
-Webpage Public IP: 13.51.207.91
+**Name:** Syed Muhammad Haris Kazmi  
+**Student ID:** 35501372  
+**Webpage Public IP:** 13.51.207.91
 
-##Creating and Instance:
+---
 
-  OS Image: Ubuntu
-  Architecture: 64 bit x86
-  Instance type: t3.micro
-  Create key and save it
-  ###Inbound rules:
-    SSH Port: My IP Address (Admin controls)
-    HTTP Port: Anywhere (So webpage can be accessed)
-    HTTPS Port: Anywhere (So webpage can be accessed)
-  ###Outbound rules:
-    All Protocols IP: Anywhere
-  Storage: 8 GiB
-  
-  Launch instance
+## Creating an Instance
 
-After Instance is created, we have to access it using ubuntu VM
+- **OS Image:** Ubuntu  
+- **Architecture:** 64-bit x86  
+- **Instance Type:** t3.micro  
+- **Key Pair:** Create and download the `.pem` file  
+- **Storage:** 8 GiB
 
-##Connecting to the Server
-  
-  ###Code:
-  ssh -i <key_filename>.pem ubuntu@<public_IP_of_instance>
+### Inbound Rules
 
-  - if you get permission error for the key, use the code:
-      sudo chmod 400 <key_filename>.pem
+- **SSH (Port 22):** My IP address (for admin access)  
+- **HTTP (Port 80):** Anywhere (to allow webpage access)  
+- **HTTPS (Port 443):** Anywhere (to allow secure webpage access)
 
-##Installing Apache:
+### Outbound Rules
 
-  ###Code:
-  sudo apt update  
-  sudo apt install apache2 -y  
-  sudo systemctl start apache2  
-  sudo systemctl enable apache2  
+- **All Protocols:** Allowed to Anywhere
 
-##Uploading HTML files:
+> After configuring the instance, click **Launch Instance**.
 
+---
+
+## Connecting to the Server
+
+Use the following command to SSH into your EC2 instance:
+```bash
+ssh -i <key_filename>.pem ubuntu@13.51.207.91
+```
+If you get a permissions error for the key file:
+```bash
+sudo chmod 400 <key_filename>.pem
+```
+## Install Apache:
+
+Run the following commands to install and start Apache:
+```bash
+sudo apt update
+sudo apt install apache2 -y
+sudo systemctl start apache2
+sudo systemctl enable apache2
+```
 
     
     
