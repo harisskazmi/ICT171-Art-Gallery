@@ -52,6 +52,7 @@ sudo systemctl enable apache2
 ## Upload HTML Design
 
 Use a template and modify it, adhering to the license.
+I used a tempelate from freehtml5.co. I changed the information, images, directories and fonts. As for the animations, that was in the template.
 
 Run the following command on your local device to copy the webpage folder to your EC2 server:
 ```bash
