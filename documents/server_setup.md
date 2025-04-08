@@ -38,7 +38,7 @@ If you get a permissions error for the key file:
 ```bash
 sudo chmod 400 <key_filename>.pem
 ```
-## Install Apache:
+## Install Apache
 
 Run the following commands to install and start Apache:
 ```bash
@@ -47,6 +47,22 @@ sudo apt install apache2 -y
 sudo systemctl start apache2
 sudo systemctl enable apache2
 ```
+---
+
+## Upload HTML Design
+
+Use a template and modify it, adhering to the license.
+
+Run the following command on your local device to copy the webpage folder to your EC2 server:
+```bash
+scp -i /path/to/<key_filename>.pem -r /path/to/webpage_folder ubuntu@13.51.207.91:/var/www/html
+```
+Make sure that the webpage folder is in the correct directory.
+
+---
+
+After following these steps your webpage should be working.
+
 
     
     
