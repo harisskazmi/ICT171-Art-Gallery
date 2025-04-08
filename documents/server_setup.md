@@ -52,7 +52,7 @@ sudo systemctl enable apache2
 ## Upload HTML Design
 
 Use a template and modify it, adhering to the license.
-I used a tempelate from freehtml5.co. I changed the information, images, directories and fonts. As for the animations, that was in the template.
+I used a template from freehtml5.co. I changed the information, images, directories, and fonts for the animations that were in the template.
 
 Run the following command on your local device to copy the webpage folder to your EC2 server:
 ```bash
@@ -62,7 +62,45 @@ Make sure that the webpage folder is in the correct directory.
 
 ---
 
-After following these steps your webpage should be working.
+After following these steps, your webpage should work.
+
+---
+
+## Adding local files to the GitHub repository (linking)
+
+-Open the terminal and go to the project folder:
+```bash
+cd /your/path/to/project
+```
+-Initialise a local Git repository:
+```bash
+git init
+```
+-Add all the files to staging:
+```bash
+git add .
+```
+-Commit the files:
+```bash
+git commit -m "Your commitment message"
+```
+-Add your GitHub remote repository:
+```bash
+git remote add origin https://github.com/your/link/to/repo
+```
+-Push your local changes and files to GitHub:
+```bash
+git push origin main
+```
+> If it asks for a username and password, instead of a password, generate a Personal Access Token (PAT) as password authentication is discontinued.
+>Additionally, you can make changes like creating files, editing, and updating files after initializing a local git repo, but to stage the files the command will be:
+> ```bash
+> git add -A
+> ```
+> This command makes sure that all new, modified, and deleted files are staged.
+
+---
+
 
 
     
