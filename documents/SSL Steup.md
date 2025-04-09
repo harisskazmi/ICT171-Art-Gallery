@@ -46,10 +46,12 @@ sudo certbot --apache
 
 This will prompt you to enter your email address (for renewal notices) and Terms or conditions. 
 >View screenshot4.png
+
 Then it will ask you to enter domain(s) name(s) You will enter : <your_domain_name.<your_TDL> www.<your_domain_name.<your_TDL>
 
 >By asking the names of your domain(s) Certbot is asking which domain(s) should the SSL Certificate cover
->Your SSL certificate should be activated now for both of your domains
+
+Your SSL certificate should be activated now for both of your domains
 
 ---
 
