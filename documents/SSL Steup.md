@@ -63,7 +63,8 @@ sudo certbot renew --dry-run
 ```
 You should get "Congratulations, all simulated renewals succeeded:"
 
->Check the SSL by going to your domain and subdomain (www) and see if there is a lock next to it
+Check the SSL by going to your domain and subdomain (www) and see if there is a lock next to it
+
 >View screenshot5.png and screenshot6.png
 
 ---
