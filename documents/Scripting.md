@@ -102,13 +102,15 @@ crontab -e
 Add the time for automation:
 
 ```bash
-59 23 * * 0 /path/to/your/script.sh
+59 23 * * 0 /path/to/your/script.sh >> /path/to/you/file.log 2>&1
 ```
 > 59 refers to minutes
 > 23 refers to hours
 > * refers to every day of the month
 > * refers to every month of the year
 > 0 refers to day of the week (0 = Sunday)
+> >> refers to the creation of a log file to the path provided
+> 2>&1 appends errors to the same log file 
 
 Save the file and then you're good to go
 
@@ -204,7 +206,7 @@ nano /your/path/to/script.sh
   Add the time for automation:
   
   ```bash
-  59 23 * * 0 /path/to/your/script.sh
+  59 23 * * 0 /path/to/your/script.sh 
   ```
   > 59 refers to minutes
   > 23 refers to hours
