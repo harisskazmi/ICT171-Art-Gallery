@@ -107,6 +107,8 @@ Add the time for automation:
 > * refers to every month of the year
 > 0 refers to day of the week (0 = Sunday)
 
+Save the file and then you're good to go
+
 ---
 
 
