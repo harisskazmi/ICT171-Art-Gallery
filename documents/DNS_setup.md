@@ -34,7 +34,10 @@ The easiest way to link a domain to your EC2 server is to make a record.
 
 >This lets people access your site via www.<your_domain_name>.<your_TLD> as well — it points that subdomain to the same EC2 IP.
 
->View screenshot3.png for further clarification on records
+
+>**View screenshot3.png for further clarification on records**
+
+---
 
 After these changes, it may take a few minutes up to a few hours for the DNS changes to update through the internet.
 >You can check by going to your domain and seeing if it takes you to your EC2 server. You can also do this through your terminal by using the command:
@@ -42,3 +45,4 @@ After these changes, it may take a few minutes up to a few hours for the DNS cha
 >ping <your_domain_name>.<your_TLD>
 >```
 
+---
