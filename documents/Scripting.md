@@ -78,11 +78,14 @@ The code is written in bash.
   done
   ```
 
+  ---
+
 ### Execution
 
   ```bash
   ~/your/path/to/the/script.sh
   ```
+
 ---
 
 ### Automation
@@ -111,6 +114,107 @@ Save the file and then you're good to go
 
 ---
 
+## Script 2: 
+
+This script creates a local backup of the images weekly, zips them, and stores them.
+
+It requires you to download zip
+
+### Logic:
+
+- Create a .sh file in a directory:
+  
+```bash
+nano /your/path/to/script.sh
+```
+
+- Create source and destination variables:
+
+  ```bash
+  SOURCE_DIR="your/path/to/folder/you/want/to/backup
+  BACKUP_DIR="$HOME/backups"
+  ```
+
+- Get current date:
+
+  ```bash
+  now=$(date + "%d_%m_%y")
+  ```
+- Create filename:
+
+  ```bash
+  BACKUP_FILE="backup_$now.zip"
+  ```
+
+- Create a full path variable:
+
+  ```bash
+  FULL_PATH="$BACKUP_DIR/BACKUP_FILE"
+
+- Create backup directory if it doesn't exist
+
+  ```bash
+  mkdir -p "$BACKUP_DIR"
+
+- Zip contents of the folder into the backup file
+
+  ```bash
+  zip -r "$FULL_PATH" "$SOURCE_DIR"
+  ```
+  >This command copies the contents of the source directory, zips them, and stores them in the full path.
+
+- Print results
+
+  ```bash
+  if [ $? -eq 0 ]; then
+    echo "Backup successful: $FULL_PATH"
+  else
+    echo "Backup failed!"
+  fi
+  ```
+  ---
+
+  ### Execution:
+
+  Go to the directory where you stored the script.sh file:
+
+  ```bash
+  cd /your/path/to/<script.sh_DIRECTORY>
+  ```
+  Run the following command to execute the file:
+
+  ```bash
+  ./<filename>.sh
+  ```
+
+  ---
+
+  ### Automation:
+
+  Create a cron job to automate the script.
+  
+  Run:
+  
+  ```bash
+  crontab -e
+  ```
+  >Select nano as editor
+  >If you have already made a script previously, go the next line in the terminal and add another job
+  
+  Add the time for automation:
+  
+  ```bash
+  59 23 * * 0 /path/to/your/script.sh
+  ```
+  > 59 refers to minutes
+  > 23 refers to hours
+  > * refers to every day of the month
+  > * refers to every month of the year
+  > 0 refers to day of the week (0 = Sunday)
+  
+  Save the file and then you're good to go
+  
+  ---
 
 
   
