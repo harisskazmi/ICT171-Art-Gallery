@@ -7,12 +7,12 @@
 
 ---
 
-We are going to obtain our free SSL certificate from Let's Encrypt 
+We are going to obtain our free SSL certificate from Let's Encrypt. 
 
 ## Prerequisites:
 
 - You already have a web server created and are connected to it
-- You have used apache web server to create your website
+- You have used an Apache web server to create your website
 - You have purchased and set up DNS
 
 ---
@@ -26,7 +26,7 @@ sudo snap install core
 sudo snap refresh core
 ```
 
-Install Certbot using following commands:
+Install Certbot using the following commands:
 
 ```bash
 sudo snap install --classic certbot
@@ -38,18 +38,18 @@ Install Certbort Plug-in for Apache:
 ```bash
 sudo certbot --apache
 ```
->Certbot automatically retreives a SSL Certificate from Let's Encrypt
+>Certbot automatically receives a SSL Certificate from Let's Encrypt
 
 ---
 
 ## Prompts
 
-This will prompt you to enter you email address (for renewal notices) and Terms or conditions. 
+This will prompt you to enter your email address (for renewal notices) and Terms or conditions. 
 >View screenshot4.png
 Then it will ask you to enter domain(s) name(s) You will enter : <your_domain_name.<your_TDL> www.<your_domain_name.<your_TDL>
 
 >By asking the names of your domain(s) Certbot is asking which domain(s) should the SSL Certificate cover
->Your SSL certificate should be activates now for both your domains
+>Your SSL certificate should be activated now for both of your domains
 
 ---
 
